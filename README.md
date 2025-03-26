@@ -35,6 +35,3 @@ L'applicazione utilizza diversi servizi e tecnologie:
 - Riccardo Maffeis (1085706)
 - Matteo Zanotti (1085443)
 
----
-Questo README fornisce una panoramica generale dell'applicazione, inclusi gli obiettivi, l'architettura e le sfide affrontate nello sviluppo.
-
