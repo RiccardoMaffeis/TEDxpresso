@@ -21,8 +21,8 @@ glueContext = GlueContext(spark.sparkContext)
 base_url = "https://newsdata.io/api/1/news"
 params = {
     "apikey": api_key,
-    "country": "us",
-    "language": "en",
+    "country": "it",
+    "language": "it",
 }
 
 response = requests.get(f"{base_url}?{urlencode(params)}")

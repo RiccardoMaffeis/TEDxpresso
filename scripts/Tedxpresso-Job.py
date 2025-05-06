@@ -75,7 +75,7 @@ tags_dataset_path = "s3://tedxpresso-data-mp/tags.csv"
 tags_dataset = spark.read.option("header","true").csv(tags_dataset_path)
 
 
-#CREATE THE AGGREGATE MODEL, ADD TAGS TO TEDX_DATASET
+CREATE THE AGGREGATE MODEL, ADD TAGS TO TEDX_DATASET
 tags_dataset_agg = tags_dataset.groupBy(col("id").alias("id_ref")).agg(collect_list("tag").alias("tags"))
 tags_dataset_agg.printSchema()
 tedx_dataset_agg = tedx_dataset_main.join(tags_dataset_agg, tedx_dataset.id == tags_dataset_agg.id_ref, "left") \
